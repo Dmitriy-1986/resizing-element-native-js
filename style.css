@@ -1,0 +1,21 @@
+.parent {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border: 1px solid red;
+}
+
+.child {
+    padding: 5px;
+    background: yellow;
+    border: 1px solid red;
+}
+
+.child:nth-child(1) {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.child:nth-child(2) {
+    flex-shrink: 0;
+}
