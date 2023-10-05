@@ -3,12 +3,24 @@
     justify-content: space-between;
     padding: 5px;
     border: 1px solid red;
+    position: relative; /* Добавляем позиционирование для родительского элемента */
 }
 
 .child {
     padding: 5px;
     background: yellow;
     border: 1px solid red;
+    opacity: 1;
+    /* Добавьте начальное значение для opacity */
+    transition: opacity 0.5s ease, left 0.5s ease; /* Добавьте переход для opacity и left */
+    left: 0; /* Начальное положение элемента */
+    position: relative; /* Добавляем позиционирование для элементов */
+}
+
+.child.hidden {
+    opacity: 0; /* Скрываем элемент */
+    left: -100%; /* Скрываем элемент влево */
+    position: absolute; /* Добавляем абсолютное позиционирование для скрытого элемента */
 }
 
 .child:nth-child(1) {
